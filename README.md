@@ -12,7 +12,12 @@
 import nouislider from '@woden/svelte-nouislider'
 </script>
 
-<nouislider start={[0, 10]} />
+<nouislider
+  start={[0, 10]}
+  on:slide={
+    e => console.log(e.detail.values)          
+  }
+/>
 ```
 
 
@@ -35,6 +40,12 @@ import nouislider from '@woden/svelte-nouislider'
 | `range` | Object | All values on the slider are part of a range. The range has a minimum and maximum value. The minimum value cannot be equal to the maximum value. [For more informations](https://refreshless.com/nouislider/slider-values/#section-range) | { min: 0, max: 100 } |
 
 ## Events
+All events provide the same output values (inside the detail object)  
+`values` : Current slider values (array)  
+`handle` : Handle that caused the event (number)  
+`unencoded`: Slider values without formatting (array)  
+`tap` : Event was caused by the user tapping the slider (boolean)  
+`positions` : Left offset of the handles (array)
 
 | Name | Description |
 | ---- | ----------- |
