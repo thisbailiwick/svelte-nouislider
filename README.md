@@ -41,11 +41,11 @@ import nouislider from '@woden/svelte-nouislider'
 
 ## Events
 All events provide the same output values (inside the detail object)  
-`values` : Current slider values (array)  
-`handle` : Handle that caused the event (number)  
-`unencoded`: Slider values without formatting (array)  
-`tap` : Event was caused by the user tapping the slider (boolean)  
-`positions` : Left offset of the handles (array)
+* `values` : Current slider values (array)  
+* `handle` : Handle that caused the event (number)  
+* `unencoded`: Slider values without formatting (array)  
+* `tap` : Event was caused by the user tapping the slider (boolean)  
+* `positions` : Left offset of the handles (array)
 
 | Name | Description |
 | ---- | ----------- |
