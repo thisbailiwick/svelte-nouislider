@@ -55,3 +55,9 @@ All events provide the same output values (inside the detail object)
 | `change` | This event is similar to the 'change' events on regular <input> elements. It fires when a user stops sliding, when a slider value is changed by 'tap', or on keyboard interaction. |
 | `start` | This event fires when a handle is clicked (mousedown, or the equivalent touch events). |
 | `end` | This event is the opposite of the 'start' event. If fires when a handle is released (mouseup etc), or when a slide is canceled due to other reasons (such as mouse cursor leaving the browser window). |
+
+## Methods
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| `getApi()` | Object | Return the internal noUiSlider reference |
+| `set()` | Number/Number[] | Set the value of the slider |
