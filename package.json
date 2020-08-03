@@ -1,6 +1,6 @@
 {
   "name": "@woden/svelte-nouislider",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": "https://github.com/Woden-app/svelte-nouislider",
   "main": "lib/index.js",
   "svelte": "src/index.svelte",
