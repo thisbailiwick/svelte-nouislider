@@ -24,6 +24,9 @@ export let range = {
 }
 export let behaviour = 'tap'
 
+export const set = value => slider.noUiSlider.set(value)
+export const getApi = () => slider.noUiSlider
+
 onMount(() => {
     noUiSlider.create(slider, {
         start,
