@@ -24,7 +24,9 @@ export default {
         }
     ],
     plugins: [
-        svelte(),
+        svelte({
+            generate: 'ssr'
+        }),
         resolve(),
         postcss({
             plugins: []
