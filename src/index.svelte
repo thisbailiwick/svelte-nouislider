@@ -22,6 +22,10 @@ export let range = {
     min: 0,
     max: 100
 }
+export let pips = {
+  mode: 'range',
+  density: 3
+}
 export let behaviour = 'tap'
 
 export const set = value => slider.noUiSlider.set(value)
@@ -42,7 +46,8 @@ onMount(() => {
         animationDuration,
         keyboardSupport,
         behaviour,
-        range
+        range,
+        pips
     })
 
     slider.noUiSlider.on(
