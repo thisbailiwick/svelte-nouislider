@@ -22,33 +22,41 @@ export let range = {
     min: 0,
     max: 100
 }
-export let pips = {
-  mode: 'range',
-  density: 3
-}
+export let pips = false
 export let behaviour = 'tap'
 
 export const set = value => slider.noUiSlider.set(value)
 export const getApi = () => slider.noUiSlider
 
+export let setNoUiSlider = false;
+
+if(setNoUiSlider) {
+  setNoUiSlider({set, getApi});
+}
+
+let options = {
+  start,
+  connect,
+  margin,
+  limit,
+  padding,
+  step,
+  orientation,
+  direction,
+  tooltips,
+  animate,
+  animationDuration,
+  keyboardSupport,
+  behaviour,
+  range
+}
+
+if(pips){
+  options.pips = pips
+}
+
 onMount(() => {
-    noUiSlider.create(slider, {
-        start,
-        connect,
-        margin,
-        limit,
-        padding,
-        step,
-        orientation,
-        direction,
-        tooltips,
-        animate,
-        animationDuration,
-        keyboardSupport,
-        behaviour,
-        range,
-        pips
-    })
+    noUiSlider.create(slider, options)
 
     slider.noUiSlider.on(
         'update',
